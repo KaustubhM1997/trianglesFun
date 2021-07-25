@@ -23,6 +23,6 @@ function checkTriangleHandler(event){
         outputDiv.innerText = "Yay! The angles inserted by you make a Triangle";
     }
     else{
-        outputDiv.innerText = "Aw snap! The angles inserted by you do not a Triangle";
+        outputDiv.innerText = "Aw snap! The angles inserted by you do not form a Triangle";
     }
 }
