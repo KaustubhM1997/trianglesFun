@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun with Triangles</title>
 </head>
+
 <body>
 
     <section class="section">
@@ -15,8 +17,96 @@
         <h1>Calculate Area</h1>
         <h3>Select the data you'd like to have in order to calculate the Area of a Triangle</h3>
 
+
+        <!-- select option to calculate area -->
+        <form class="formulaSelectionForm">
+            <div class="radio">
+                <label class="label" for="calArea1">
+                    <input type="radio" id="calArea1" name="areaCalOption" value="areaCalOption1">
+                    If you have base and height length</label>
+            </div>
+            <div class="radio">
+                <label class="label" for="calArea2">
+                    <input type="radio" id="calArea2" name="areaCalOption" value="areaCalOption2">
+                    If you have length of 3 sides</label>
+            </div>
+        </form>
+
+
+        <!-- area calculation 1st formula -->
+        <div style="margin-top: 1rem; margin-bottom: 1rem;" class="areaCalBlock">
+            <div class="triangle">
+
+                <label class="label heightH">height</label>
+                <label class="label sideC">base</label>
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+                <div class="line line4"></div>
+                <div class="line line5"></div>
+                <div class="line line6"></div>
+            </div>
+
+            <form class="form" class="formForAreaCal">
+                <label class="label">base=
+                    <input class="inputBox inputSide inputInOption1" type="number" min="0.0001" step="0.00001" required>
+                </label>
+
+                <label class="label">height=
+                    <input class="inputBox inputSide inputInOption1" type="number" min="0.0001" step="0.00001" required>
+                </label>
+
+                <button class="button" id="submitBtn">calculate</button>
+            </form>
+            <h2>Area will be calculated here-</h2>
+            <div class="outputHere">
+                <label class="label">Area=</label>
+                <div style="display:inline;" class="areaShowHere">1/2*base*height</div>
+            </div>
+        </div>
+
+        <!-- area calculation 2nd formula -->
+        <div style="margin-top: 1rem; margin-bottom: 1rem;" class="areaCalBlock">
+            <div class="triangle">
+                <label class="label sideA">a</label>
+                <label class="label sideB">b</label>
+                <label class="label sideC">c</label>
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+
+            <form class="form" class="formForAreaCal">
+
+                <label class="label">a=
+                    <input class="inputBox inputSide inputInOption2" type="number" min="0.0001" step="0.00001" required>
+                </label>
+
+                <label class="label">b=
+                    <input class="inputBox inputSide inputInOption2" type="number" min="0.0001" step="0.00001" required>
+                </label>
+
+                <label class="label">c=
+                    <input class="inputBox inputSide inputInOption2" type="number" min="0.0001" step="0.00001" required>
+                </label>
+                <p class="label error" style="color: brown;">Enter valid side lengths such that each side length should
+                    be less than sum of other two sides</p>
+
+                <button class="button" id="submitBtn">calculate</button>
+            </form>
+            <h2>Area will be calculated here-</h2>
+            <div class="outputHere">
+                <label class="label">Area=</label>
+                <div style="display:inline;" class="areaShowHere"><span style="font-size: 1.8rem;">√</span><span
+                        style="border-top:2px solid black; padding-top:0.1rem;">s(s-a)(s-b)(s-c)</span></div>
+            </div>
+        </div>
+
     </section>
 
-    
+    <script src="area.js" type="text/javascript"></script>
+
+
 </body>
+
 </html>
